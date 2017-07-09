@@ -27,10 +27,14 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('com.querydsl:querydsl-jpa')
+	compile('com.querydsl:querydsl-jpa'){
+		exclude group: 'org.slf4j', module: 'slf4j-api'
+	}
+	compile('com.zaxxer:HikariCP'){
+		exclude group: 'org.slf4j', module: 'slf4j-api'
+	}
 	compile('com.querydsl:querydsl-apt')
 	compile('org.projectlombok:lombok')
-	compile('com.zaxxer:HikariCP')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
