@@ -11,6 +11,7 @@ import java.util.List;
  * 2017. 7. 9. PM 2:20
  */
 @Entity
+@Table(name = "article")
 public class Article extends AbstractTimestampEntity implements Serializable{
     protected Article(){}
     public Article(String title, String content){

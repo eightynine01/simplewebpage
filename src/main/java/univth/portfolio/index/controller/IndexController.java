@@ -1,9 +1,8 @@
 package univth.portfolio.index.controller;
 
-import groovy.util.logging.Slf4j;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created by TaeHwan
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
     @GetMapping("/test")
     public String test(){
+        log.info("test","");
         return "/test";
     }
 }
